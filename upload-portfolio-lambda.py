@@ -1,4 +1,5 @@
 import boto3
+from botocore.client import Config
 import StringIO
 import zipfile
 import mimetypes
@@ -12,7 +13,7 @@ def lambda_handler(event, context):
         "objectKey": 'portfoliobuild.zip'
     }
     try:
-        job = event.get("CodePipline.job")
+        job = event.get("CodePipeline.job")
 
         if job:
             for artifact in job["data"]["inputArtifacts"]:
@@ -21,10 +22,10 @@ def lambda_handler(event, context):
 
         print "Building portfolio from " + str(location)
 
-        s3 = boto3.resource('s3')
+        s3 = boto3.resource('s3', config=Config(signature_version='s3v4'))
 
         portfolio_bucket = s3.Bucket('portfolio.robcecchini.com')
-        build_bucket = s3.Bucket(location['bucketName'])
+        build_bucket = s3.Bucket(location["bucketName"])
 
         portfolio_zip = StringIO.StringIO()
         build_bucket.download_fileobj(location["objectKey"], portfolio_zip)
@@ -39,10 +40,9 @@ def lambda_handler(event, context):
         topic.publish(Subject="Portfolio Deployed", Message="Portfolio deployed successfully!")
         if job:
             codepipeline = boto3.client('codepipeline')
-            codepipeline.put_job_success_result(jobId=job["id"])
-
+            codepipeline.put_job_success_result(jobId=job['id'])
     except:
-        topic.publish(Subject="Portfolio Deployment Failed", Message="The portfolio was not deployed due to an error!")
+        topic.publish(Subject="Portfolio Deploy Failed", Message="The portfolio was not deployed due to an error!")
         raise
 
-    return 'Hello from Lambda'
+return 'Hello from Lambda'
