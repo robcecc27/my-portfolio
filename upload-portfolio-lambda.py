@@ -45,4 +45,4 @@ def lambda_handler(event, context):
         topic.publish(Subject="Portfolio Deploy Failed", Message="The portfolio was not deployed due to an error!")
         raise
 
-return 'Hello from Lambda'
+    return 'Hello from Lambda'
