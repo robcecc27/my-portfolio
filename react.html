@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!--Rob Cecchini, Nov 2018 -->
+    <!--React, JavaScript, Mocha, Chia, Babel, CSS, HTML  -->
     <meta charset="utf-8">
     <title>React Demo</title>
     <link rel="stylesheet" href="https://unpkg.com/mocha@5.0.4/mocha.css">
-
+    <!-- inline styles to improve look -->
     <style media="screen">
+    /* added margin to top so text box wasn't on the edge */
       .margin {
         margin-top: 2%;
       }
+      /* set message box size etc. */
       .messageBox {
         border: 1px solid;
         margin: 1em;
@@ -115,7 +119,7 @@
         });
 
         it("Let us test a function", () => {
-          let myName = "Robin";
+          let myName = "Rob";
           const greet = (name) => "Hello, " + name;
 
           assert.include(greet(myName), myName, "Greeting includes name");
@@ -133,7 +137,7 @@
         it("Rendered an error when name is empty", () => {
           let msgBox = document.querySelector(".messageBox");
           let button = document.querySelector("#inputButton");
-          button.click();
+          button.click();  // Test assertions with button click uncomment to test
           assert.include(msgBox.classList.value, "error", "We clicked the button");
         })
       });
