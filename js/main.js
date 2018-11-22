@@ -22,8 +22,8 @@ const myWork = [
   {
     'title': "Work Example",
     'image': {
-      'desc': "images/example3.png",
-      'src': "example screenshot of a project involving cats",
+      'desc': "example screenshot of this project",
+      'src': "images/example1.png",
       'comment': ""
     }
   }
