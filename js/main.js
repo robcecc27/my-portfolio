@@ -1,5 +1,32 @@
-import 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ExampleWork from './example-work';
 
-console.log("Loaded react-dom");
+const myWork = [
+  {
+  'title': "AWS Polly Text to Speech",
+    'image': {
+      'desc': "Text to Speech using AWS Polly",
+      'src': "images/polly.png",
+      'comment': ""
+    }
+  },
+  {
+    'title': "Work Example",
+    'image': {
+      'desc': "example screenshot of a project involving chemistry",
+      'src': "images/example2.png",
+      'comment': ""
+    }
+  },
+  {
+    'title': "Work Example",
+    'image': {
+      'desc': "images/example3.png",
+      'src': "example screenshot of a project involving cats",
+      'comment': ""
+    }
+  }
+];
 
-console.log("Webpack works");
+ReactDOM.render(<ExampleWork work={myWork}/>, document.getElementById('example-work'));
