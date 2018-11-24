@@ -1,0 +1,9 @@
+
+//notes for future file changes and updates etc.
+cd Documents/GitHub/my-portfolio  //change to portfolio working directory
+// launch each in its own new git window, do not need Power Shell to run.
+ws //launch localhost webserver
+npm run webpack-watch //start webpack watch for file changes
+npm run test-watch //start test watch for saves to test
+
+Atom
