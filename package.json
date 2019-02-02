@@ -38,6 +38,6 @@
   },
   "jest": {
     "verbose": true,
-    "testURL": "https://portfolio.robcecchini.com/"
+    "testURL": "http://localhost/"
   }
 }
