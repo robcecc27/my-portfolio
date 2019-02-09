@@ -12,7 +12,7 @@ artifacts:
   files:
     - index.html
     - favicon.ico
-    - Resume-Feb-2019.pdf
+    - Resume.pdf
     - styles/main.css
     - images/*
     - dist/bundle.js
