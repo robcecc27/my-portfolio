@@ -18,8 +18,8 @@ const myWork = [
   {
     'title': "Work Example",
     'image': {
-      'desc': "example screenshot of a project involving chemistry",
-      'src': "images/example2.png",
+      'desc': "react and aws logo in one",
+      'src': "images/react_aws.png",
       'comment': ""
     }
   }

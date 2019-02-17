@@ -8,7 +8,7 @@ const myWork = [
   'href': "https://studywithpolly.com",
   'desc': "A text to speech applications. Enter any text in the box and click submit. Use the returned ID to retrieve the audio version of the text. AWS services used in the making of this webpage were: I.A.M. roles and policies, Lambda functions, Cloud Front, SNS, DynamoDB, S3, Amazon API gateway, CloudWatch, AWS Route 53",
     'image': {
-      'desc': "Text to Speech using AWS Polly AWS Polly",
+      'desc': "Text to Speech using AWS Polly",
       'src': "images/polly.png",
       'comment': ""
     }
