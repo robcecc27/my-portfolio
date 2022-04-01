@@ -1,3 +1,5 @@
+## This repo is archived, out of date, contains a number of security issues and will not be updated. 
+
 # Rob Cecchini's portfolio
 
 This is my professional portfolio. It uses AWS and ReactJS.
